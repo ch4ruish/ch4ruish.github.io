@@ -1,218 +1,124 @@
 /* This file controls how everything LOOKS.
    Change a value, save, and refresh your browser to see what happens. */
 
-/* Load a font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Work+Sans:wght@400;600;700&display=swap');
 
-:root {
-  --pink: #ff5fa2;
-  --pink-dark: #d63384;
-  --pink-soft: #ffe0ef;
-  --lavender: #f4d8ff;
-  --cream: #fffafc;
-  --ink: #5c3556;
-}
+/* Load a font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
+
 
 /* Rules for the whole page */
 
 body {
   font-family: "Work Sans", sans-serif;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.6;
+  background: #E0E7FF;   /* page background color — try changing this! */
+  color: #333333;        /* text color */
   margin: 0;
-  min-height: 100vh;
-  color: var(--ink);
-  background:
-    radial-gradient(circle at top left, rgba(255, 95, 162, 0.28), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(244, 216, 255, 0.9), transparent 24%),
-    linear-gradient(135deg, #fff4fb 0%, #ffeaf5 45%, #fffdfd 100%);
-  position: relative;
-  overflow-x: hidden;
 }
 
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  filter: blur(20px);
-  opacity: 0.35;
-  pointer-events: none;
-}
-
-body::before {
-  top: -60px;
-  right: -40px;
-  background: rgba(255, 95, 162, 0.28);
-}
-
-body::after {
-  bottom: -50px;
-  left: -20px;
-  background: rgba(244, 216, 255, 0.6);
-}
 
 /* Headings */
 
 h1, h2, h3 {
-  color: var(--pink-dark);
-  font-family: "Poppins", sans-serif;
-  line-height: 1.2;
+  color: #1D1F50;
 }
 
-h1 {
-  font-size: 2.1rem;
-  margin-bottom: 0.3rem;
-}
-
-h2 {
-  font-size: 1.25rem;
-  margin-top: 1.7rem;
-}
 
 /* Links */
 
 a {
-  color: var(--pink-dark);
-  text-decoration: none;
-  transition: color 0.2s ease, transform 0.2s ease;
+  color: #FF4343;        /* the accent color */
 }
 
-a:hover {
-  color: var(--pink);
-  transform: translateY(-1px);
-}
 
 /* The bar at the top */
 
 header {
-  max-width: 760px;
+  max-width: 640px;
   margin: auto;
-  padding: 24px 20px 10px;
+  padding: 20px;
   font-weight: 700;
 }
 
 .header-text {
-  display: inline-block;
-  color: var(--pink-dark);
+  color: #1D1F50;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 0.7rem 1.1rem;
-  border-radius: 999px;
-  box-shadow: 0 8px 18px rgba(214, 51, 132, 0.16);
-  border: 1px solid rgba(255, 95, 162, 0.16);
 }
+
 
 /* The white box that holds your content */
 
 main {
-  max-width: 720px;
+  max-width: 600px;
   margin: auto;
-  padding: 32px 36px 40px;
-  background: linear-gradient(135deg, var(--cream) 0%, #ffffff 100%);
-  border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(214, 51, 132, 0.12);
-  position: relative;
-  overflow: hidden;
+  padding: 20px 40px 40px 40px;
+  background: #ffffff;
+  border-radius: 8px;
 }
 
-main::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, rgba(255, 95, 162, 0.06), transparent 45%, rgba(244, 216, 255, 0.1));
-  pointer-events: none;
-}
-
-main > * {
-  position: relative;
-  z-index: 1;
-}
 
 /* Pictures never overflow the box */
 
 main img {
   max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 10px 24px rgba(214, 51, 132, 0.14);
+  border-radius: 4px;
 }
 
 .image-caption {
   font-style: italic;
-  opacity: 0.7;
-  margin-top: 0.4rem;
+  opacity: 0.6;
 }
 
 .date {
-  opacity: 0.7;
-  margin-top: -0.3rem;
+  opacity: 0.6;
 }
 
-ul {
-  padding-left: 0;
-  list-style: none;
-}
-
-li {
-  padding: 0.45rem 0;
-}
-
-li::before {
-  content: "✦";
-  color: var(--pink);
-  margin-right: 0.6rem;
-}
 
 /* Quotes */
 
 blockquote {
-  border-left: 5px solid var(--pink);
-  margin: 1.2rem 0;
-  padding: 0.9rem 1rem;
-  font-size: 1.05rem;
-  background: linear-gradient(90deg, rgba(255, 224, 239, 0.8), rgba(255, 255, 255, 0.7));
-  border-radius: 0 12px 12px 0;
+  border-left: 4px solid #FF4343;
+  margin-left: 0;
+  padding-left: 16px;
+  font-size: 120%;
 }
+
 
 /* The footer at the bottom */
 
 footer {
-  max-width: 760px;
+  max-width: 640px;
   margin: auto;
   padding: 20px;
   text-align: center;
-  font-size: 0.9rem;
-  color: var(--ink);
+  font-size: 80%;
 }
+
 
 /* The beating heart */
 
 .heart {
-  color: var(--pink-dark);
+  color: #FF4343;
   animation: beat 1s infinite;
 }
 
 @keyframes beat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.16); opacity: 0.75; }
+  50% { opacity: 0.5; }
 }
+
 
 /* Anything below this only applies to small screens (phones) */
 
 @media only screen and (max-width: 600px) {
+
   body {
-    background: linear-gradient(135deg, #fff4fb 0%, #ffeaf5 100%);
+    background: #ffffff;
   }
 
   main {
-    padding: 20px 18px 32px;
-    border-radius: 18px;
-    margin: 0 12px;
+    padding: 10px 5% 40px 5%;
+    border-radius: 0;
   }
 
-  header {
-    padding: 18px 12px 8px;
-  }
 }
