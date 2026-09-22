@@ -42,6 +42,7 @@ img {
 
 .hero-panel {
   position: relative;
+  container-type: inline-size;
   min-height: 640px;
   background: linear-gradient(180deg, rgba(255,255,255,0.38), rgba(255,255,255,0.14));
   border: 1px solid rgba(31, 29, 29, 0.15);
@@ -83,7 +84,8 @@ img {
   padding: 0 0.04em;
   text-align: center;
   white-space: nowrap;
-  font-size: clamp(3rem, 11.5vw, 10.5rem);
+  font-size: clamp(2.4rem, 8vw, 7.5rem);
+  font-size: clamp(2.4rem, 9cqw, 7.5rem);
   line-height: 0.82;
   letter-spacing: -0.045em;
   font-weight: 400;
@@ -91,32 +93,21 @@ img {
   color: transparent;
   background: linear-gradient(
     180deg,
-    #ffffff 0%,
-    #e7e7e7 10%,
-    #a7aab0 20%,
-    #fafafa 30%,
-    #8a8f94 41%,
-    #ececec 52%,
-    #686d72 64%,
-    #f1f1f1 76%,
-    #8b8f94 88%,
-    #fdfdfd 100%
+    #8f9296 0%,
+    #d8dadd 12%,
+    #686c71 25%,
+    #bfc2c5 38%,
+    #4d5156 50%,
+    #e0e2e4 63%,
+    #777b80 76%,
+    #c7c9cc 89%,
+    #5a5e63 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-stroke: 0.7px rgba(40, 42, 44, 0.25);
-  text-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 2px 8px rgba(255,255,255,0.22), 0 12px 28px rgba(22,22,22,0.08);
-  filter: drop-shadow(0 0 12px rgba(182, 185, 188, 0.9));
+  -webkit-text-stroke: 0.7px rgba(35, 38, 42, 0.5);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.35), 0 3px 5px rgba(22,22,22,0.16);
   max-width: none;
-}
-
-.hero-headline::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 0 0;
-  background: linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.7) 18%, transparent 36%);
-  mix-blend-mode: screen;
-  pointer-events: none;
 }
 
 .editorial-panel {
